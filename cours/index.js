@@ -46,3 +46,21 @@ document.body.addEventListener("click", (e) =>{
       null;
   }
 });
+let array1 = ["javascript", "PHP", "Python"]
+let array2 = ["ruby", "solidity"]
+
+let newArray = array1 + array2 
+
+document.body.innerHTML = data
+.filter((user) => user.admin === false)
+.sort((a , b) => b.age - a.age)
+.map((user) =>
+ `
+  <div class="user-card">
+    <h2> ${user.pseudo} </h2>
+    <p>Age : ${user.age} </p>
+    <p>Status : ${user.admin ? "Modérateur" : "Membre"} </p>
+  </div>
+`
+)
+.join("")
