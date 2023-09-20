@@ -75,6 +75,11 @@ input[type="range"]::-webkit-slider-thumb:active {
   justify-content: space-around;
   align-items: center;
 }
+input[type="text"]{
+  background: none;
+  outline: none;
+  border: none;
+}
 input[type="checkbox"] {
   display: none;
 }
