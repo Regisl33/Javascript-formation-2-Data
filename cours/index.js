@@ -64,3 +64,25 @@ document.body.innerHTML = data
 `
 )
 .join("")
+
+
+let date = new Date()
+console.log(date)
+
+let iso = date.toISOString();
+
+let moreData = {
+  destVar: ["Element 1", "Element 2"]
+};
+//pour destrcturer le tableau
+const  { destVar } = moreData;
+
+let array5 = [70, 80, 90]
+let [x, y, z] = array5
+
+const dateDestructuring = (chaine) => {
+  let newdate = chaine.split("T")[0];
+  let [y, m, d] = newdate.split("-");
+  return [d, m, y].join("/");
+}
+console.log(dateDestructuring(iso))

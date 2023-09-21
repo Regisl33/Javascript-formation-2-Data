@@ -6,6 +6,7 @@ const dataSymbols = "/*-+=!$#@%?&()";
 function generatePassword() {
   let data = [ ];
   let password = " ";
+
   if(lowercase.checked) data.push(...dataLowercase);
   if(uppercase.checked) data.push(...dataUppercase);
   if(numbers.checked) data.push(...dataNumbers);
@@ -14,17 +15,17 @@ function generatePassword() {
   if(data.lenght === 0){
     alert("Veuillez sélectionner des critères");
     return;
-  }
+  };
 
   for(i=0; i < passwordLenght.value; i++){
     password += data[Math.floor(Math.random() * data.length)];
-  }
-  passwordOutput.value = password;
+  };
 
+  passwordOutput.value = password;
   passwordOutput.select();
   navigator.clipboard.writeText(passwordOutput.value);
-
   generateButton.textContent = "Copié !";
+
   setTimeout(() =>{
     generateButton.textContent = "Générer mot de passe";
   }, 2000);
